@@ -15,6 +15,11 @@ dotenv.config();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Home route
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello👋, Server is up and running👍");
+});
+
 // Route to fetch exchange rates
 app.get("/api/v1/rates", async (req: Request, res: Response) => {
   try {
